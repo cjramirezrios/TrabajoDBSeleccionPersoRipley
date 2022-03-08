@@ -1,0 +1,36 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#Panel_superior img{
+  height: 50px;
+  width: 50px;
+}
+#Panel_superior h1{
+  color: white;
+  padding-left: 30px;
+  padding-top: 8px;
+}
+#Panel_superior{
+  background-color: black;
+  display: flex;
+  flex-basis: 20%;
+  width: 100%;
+}
+#clearbox{
+  float: none;
+  clear: left;
+}
+ul{
+  display: flex;
+  border-bottom: 1px solid black;
+  align-content: flex-end;
+}
+ul li{
+  padding: 5px;
+}
+footer{
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+}
