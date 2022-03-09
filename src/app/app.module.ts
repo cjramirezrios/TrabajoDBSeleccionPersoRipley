@@ -12,6 +12,7 @@ import { FormularioMensajeGmComponent } from './formulario-mensaje-gm/formulario
 
 const appRoutes:Routes=[
   {path:'', component:LoginComponent},
+  {path:'login', component:LoginComponent},
   {path:'home', component:HomeComponent},
   {path:'CreacionConvocatoria', component:CreacionConvocatoriaComponent},
   {path:'VerConvocatoria', component:VerConvocatoriaComponent},

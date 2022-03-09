@@ -1,0 +1,31 @@
+#CreacionConvocatoria{
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  width: 1000px; 
+  padding: 30px;
+  height: 500px;
+}
+#CreacionConvocatoria .FormularioConvocatoria{
+  display: flex;
+  padding: 10px;
+  width: 500px;
+}
+ .FormularioConvocatoria label{
+   margin-right: 5px;
+ }
+.FormularioConvocatoria aside input[type="number"]{
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+#Certificacion{
+  display: block;
+  float: right;
+  width: 150px;
+}
+#clearbox{
+  float: none;
+  clear: left;
+}
