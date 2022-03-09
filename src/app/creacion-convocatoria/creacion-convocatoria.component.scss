@@ -20,10 +20,33 @@
   margin-left: 5px;
   margin-right: 10px;
 }
+#Columna{
+  display: flex;
+  flex-basis: auto;
+}
 #Certificacion{
   display: block;
-  float: right;
+  float:right;
+  width: 250px;
+  border: 1px solid black;
+  padding: 20px;
+  padding-top:7px;
+  border-radius: 20px;
+}
+#Certificacion form input[type="text"],
+#Certificacion form input[type="number"]{
   width: 150px;
+  margin-bottom: 5px;
+  margin-right: 40px;
+}
+#Certificacion form{
+  display: flex;
+}
+#Adicionar{
+  margin-top: 40px;
+  border-radius: 5px;
+height: 40px;
+width: 70px;
 }
 #clearbox{
   float: none;
