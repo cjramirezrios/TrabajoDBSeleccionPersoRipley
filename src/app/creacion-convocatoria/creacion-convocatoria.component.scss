@@ -1,36 +1,48 @@
+h1{
+  text-align: center;
+}
+nav{
+  display: flex;
+  border-bottom: 1px solid black;
+  align-content: flex-end;
+  text-decoration: none;
+}
+nav a{
+  padding: 5px;
+  text-decoration: none;
+}
 #CreacionConvocatoria{
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
   margin: auto;
-  width: 1000px; 
+  width: 800px; 
   padding: 30px;
   height: 500px;
+  display: flex;
 }
 #CreacionConvocatoria .FormularioConvocatoria{
   display: flex;
   padding: 10px;
   width: 500px;
 }
- .FormularioConvocatoria label{
+ .FormularioConvocatoria label,
+ .FormularioConvocatoria input{
    margin-right: 5px;
+   margin-top: 20px;
  }
 .FormularioConvocatoria aside input[type="number"]{
   width: 50px;
   margin-left: 5px;
   margin-right: 10px;
 }
-#Columna{
-  display: flex;
-  flex-basis: auto;
-}
+
 #Certificacion{
-  display: block;
-  float:right;
   width: 250px;
   border: 1px solid black;
   padding: 20px;
   padding-top:7px;
+  height: 200px;
   border-radius: 20px;
 }
 #Certificacion form input[type="text"],
@@ -45,8 +57,12 @@
 #Adicionar{
   margin-top: 40px;
   border-radius: 5px;
-height: 40px;
-width: 70px;
+  height: 40px;
+  width: 70px;
+}
+#Generar{
+  height: 40px;
+  padding: 10px;
 }
 #clearbox{
   float: none;
