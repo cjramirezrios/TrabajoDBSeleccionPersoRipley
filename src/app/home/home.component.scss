@@ -5,6 +5,15 @@ aside{
   align-items: baseline;
   
 }
+aside img{
+  width: 350px;
+  height: 260px;
+  margin-top: 30px;
+}
+.opciones button{
+  justify-content: end;
+  margin-top: 80px;
+}
 nav{
   display: flex;
   border-bottom: 1px solid black;
