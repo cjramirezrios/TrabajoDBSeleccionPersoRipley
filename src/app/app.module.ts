@@ -9,6 +9,13 @@ import { CreacionConvocatoriaComponent } from './creacion-convocatoria/creacion-
 import { VerConvocatoriaComponent } from './ver-convocatoria/ver-convocatoria.component';
 import {RouterModule, Routes} from '@angular/router';
 import { FormularioMensajeGmComponent } from './formulario-mensaje-gm/formulario-mensaje-gm.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
 
 const appRoutes:Routes=[
   {path:'', component:LoginComponent},
@@ -30,7 +37,12 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatProgressSpinnerModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
