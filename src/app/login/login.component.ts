@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+//import { ApiService } from '../ApiService';
+//import { Usuario } from '../model';
 
 @Component({
   selector: 'app-login',
@@ -10,20 +12,41 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-
-  constructor(private router:Router, private fb:FormBuilder, private _snackBar:MatSnackBar) {
+  //user: Usuario=null;
+  pagina:String='A';
+  constructor(private router:Router, private fb:FormBuilder, private _snackBar:MatSnackBar,/*private apiService: ApiService*/) {
     this.form=this.fb.group({
       correo_electronico:['',Validators.required],
-      password:['',Validators.required]      
+      password:['',Validators.required],
+      tipo_usuario:['',Validators.required]      
     })
    }
 
   ngOnInit(): void {
+    /*this.user={
+     correo: "",
+     contra: "",
+     tipoUsuario:"" ,
+     nroDni:"" ,
+      nombres: "",
+     apellidos: ""
+
+    };
+    */
+  }
+  
+  Registrarse(){
+    if(this.pagina=='A'){
+      this.pagina='N';
+    }else{
+      this.pagina='A';
+    }
   }
   Ingresar(){
     const correo_electronico=this.form.value.correo_electronico;
     const password=this.form.value.password;
-    if(correo_electronico == 'Prueba@gmail.com' && password == '123'){
+    const tipo_usuario=this.form.value.tipo_usuario;
+    if(correo_electronico == 'Prueba@gmail.com' && password == '123' && tipo_usuario=='Administrador'){
       this.EnviarHome();
     }else{
       this.Error();
@@ -31,6 +54,9 @@ export class LoginComponent implements OnInit {
   }
   EnviarHome(){
     this.router.navigate(['/home']);
+  }
+  EnviarLogin(){
+    this.pagina='A';
   }
   Error(){
     this._snackBar.open('Correo electronico o contraseña invalidos','',{

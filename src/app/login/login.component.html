@@ -1,6 +1,5 @@
 
-<p>Bienvenido a la Cuenta Ripley</p>
-<aside>
+<aside *ngIf="pagina=='A'" >
   <img src="https://uptrainingclub.com/wp-content/uploads/2020/03/undraw_Login_re_4vu2-1080x675.png"/>
   <div id="Login">
     <h1>LOGIN</h1>
@@ -15,15 +14,64 @@
       </p >
       <p id="TipoUsuario">
         Tipo de usuario:<br/>
-        <input type="radio" name="tipo usuario" value="Postulante">Postulante
-        <input type="radio" name="tipo usuario" value="Administrador">Administrador
+        <input formControlName="tipo_usuario"  type="radio" name="tipo usuario" value="Postulante">Postulante
+        <input formControlName="tipo_usuario" type="radio" name="tipo usuario" value="Administrador">Administrador
       </p>
       <p id="BotonIngresar">
          <button (click)="Ingresar()" [disabled]="form.invalid">Ingresar</button>
       </p>
+      <p id="question">¿Eres postulante y no tienes cuenta?</p>
+      <p id="botonRegis"><a  (click)="Registrarse()">Registrate aquí</a></p>
     </form>
   </div>
-  
+</aside>
+
+<aside *ngIf="pagina=='N'" id="PagRegis">
+  <h1 id="TituloRegis">Registro</h1>
+  <div id="CreacionRegistro">
+    
+    <form >
+      <div class="FormularioRegistro">
+        <label>Nombres</label>
+      <input type="text" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Apellidos</label>
+      <input type="text" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Contraseña</label>
+      <input type="password" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Correo electronico</label>
+      <input type="email">
+      </div>
+      <div class="FormularioRegistro">
+        <label>Numero de DNI</label>
+      <input type="text" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Telefono</label>
+      <input type="text" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Ciudad</label>
+      <input type="text" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Distrito</label>
+      <input type="text" >
+      </div>
+      <div class="FormularioRegistro">
+        <label>Grado Academico</label>
+      <input type="text" >
+      </div>
+    </form>
+  </div>
+  <div class="BotonGenerar">
+    <input (click)="EnviarLogin()"  id="Generar" type="submit" value="REGISTRAR" >
+    </div>
 </aside>
 
 

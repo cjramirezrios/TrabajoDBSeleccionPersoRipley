@@ -6,10 +6,11 @@ aside{
   flex-direction: 50%;
   width: 100%;
 }
+
 aside #Login{
   margin-left: 300px;
   margin-top: 50px;
-  height: 300px;
+  height: 330px;
   width: 500px;
   border: 3px solid black;
   border-radius: 10px;
@@ -94,5 +95,69 @@ aside img{
   border-top-right-radius: 3px;
   top: 9px
  } 
+ #question{
+   text-align: center;
+   margin-bottom: 2px;
+ }
+  #botonRegis{
+   text-align: center;
+   color:cornflowerblue;
+   text-decoration: underline;
+   width: 100%;
+ }
+ #botonRegis a{
+   cursor: pointer;
+ }
 
 
+//REGISTRO
+#PagRegis{
+  display: block;
+  margin-top: 50px;
+}
+#TituloRegis{
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+
+#CreacionRegistro{
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px; 
+  padding: 30px;
+  height: 550px;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 780px;
+}
+#CreacionRegistro .FormularioRegistro{
+  display: flex;
+  padding: 10px;
+  width: 500px;
+}
+#CreacionRegistro form{
+  display: block;
+  inset-block:initial ;
+  align-content: center;
+}
+
+ .FormularioRegistro label,
+ .FormularioRegistro input{
+   margin-right: 5px;
+   margin-top: 20px;
+ }
+.FormularioRegistro aside input[type="number"]{
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+#Generar{
+  height: 40px;
+  padding: 10px;
+  margin-left: 980px;
+  margin-top: 10px;
+  cursor: pointer;
+}
