@@ -29,8 +29,8 @@
 <aside *ngIf="pagina=='N'" id="PagRegis">
   <h1 id="TituloRegis">Registro</h1>
   <div id="CreacionRegistro">
-    
     <form [formGroup]="postulanteForm" (ngSubmit)="Guardar()">
+
       <div class="FormularioRegistro">
         <label>Nombres</label>
       <input  type="text" formControlName="Nombres" >
@@ -89,6 +89,7 @@
     </form>
   </div>
 </aside>
+
 
 
 
