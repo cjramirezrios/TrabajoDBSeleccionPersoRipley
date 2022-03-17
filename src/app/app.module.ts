@@ -16,6 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePosComponent } from './home-pos/home-pos.component';
+import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -47,7 +51,11 @@ const appRoutes:Routes=[
     BrowserAnimationsModule,
     MatSliderModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule, 
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
