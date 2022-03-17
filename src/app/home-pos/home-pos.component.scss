@@ -1,0 +1,38 @@
+nav{
+  display: flex;
+  border-bottom: 1px solid black;
+  align-content: flex-end;
+  text-decoration: none;
+}
+nav a{
+  padding: 5px;
+  text-decoration: none;
+}
+
+
+aside{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  
+}
+aside img{
+  width: 350px;
+  height: 260px;
+  margin-top: 30px;
+}
+.opciones button{
+  justify-content: end;
+  margin-top: 80px;
+}
+
+aside div{
+  margin-top: 50px;
+  margin-left: 230px;
+  height: auto;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 15px;
+  
+}

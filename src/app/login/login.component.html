@@ -6,7 +6,7 @@
     <form [formGroup]="form" (ngSubmit)="Ingresar()">
       <p class="Registro">
       <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/user-male-icon.png">
-      <input type="email" name="Correo electronico" placeholder="Correo electronico" formControlName="correo_electronico"/>
+      <input type="email" name="correo_electronico" placeholder="Correo electronico" formControlName="correo_electronico"/>
       </p>
       <p class="Registro">
         <img src="https://e7.pngegg.com/pngimages/344/584/png-clipart-lock-computer-icons-user-computer-security-user-password.png">
@@ -14,8 +14,8 @@
       </p >
       <p id="TipoUsuario">
         Tipo de usuario:<br/>
-        <input formControlName="tipo_usuario"  type="radio" name="tipo usuario" value="Postulante">Postulante
-        <input formControlName="tipo_usuario" type="radio" name="tipo usuario" value="Administrador">Administrador
+        <input formControlName="tipo_usuario"  type="radio" name="tipo_usuario" value="Postulante">Postulante
+        <input formControlName="tipo_usuario" type="radio" name="tipo_usuario" value="Administrador">Administrador
       </p>
       <p id="BotonIngresar">
          <button (click)="Ingresar()" [disabled]="form.invalid">Ingresar</button>
@@ -30,48 +30,64 @@
   <h1 id="TituloRegis">Registro</h1>
   <div id="CreacionRegistro">
     
-    <form >
+    <form [formGroup]="postulanteForm" (ngSubmit)="Guardar()">
       <div class="FormularioRegistro">
         <label>Nombres</label>
-      <input type="text" >
+      <input  type="text" formControlName="Nombres" >
       </div>
       <div class="FormularioRegistro">
         <label>Apellidos</label>
-      <input type="text" >
+      <input  type="text" formControlName="Apellidos">
       </div>
       <div class="FormularioRegistro">
         <label>Contraseña</label>
-      <input type="password" >
+      <input  type="password" formControlName="Password">
       </div>
       <div class="FormularioRegistro">
         <label>Correo electronico</label>
-      <input type="email">
+      <input  type="email" formControlName="Correo_electronico">
       </div>
       <div class="FormularioRegistro">
         <label>Numero de DNI</label>
-      <input type="text" >
+      <input type="text" formControlName="Nro_DNI">
+      </div>
+      <div class="FormularioRegistro">
+        <label>Fecha de nacimiento</label>
+      <input type="date" formControlName="Fecha_nacimiento">
       </div>
       <div class="FormularioRegistro">
         <label>Telefono</label>
-      <input type="text" >
+      <input  type="text" formControlName="Telefono" >
       </div>
       <div class="FormularioRegistro">
-        <label>Ciudad</label>
-      <input type="text" >
+        <label>Departamento</label>
+      <select name="departamento" id="departamento" formControlName="departamento" class="from-control" >
+        <option [ngValue]="item" *ngFor="let item of departamentos">{{item.nombre}}</option>
+      </select>
+      </div>
+      <div class="FormularioRegistro">
+        <label>Provincia</label>
+        <select name="provincia" id="provincia" formControlName="provincia" class="from-control" >
+          <option [ngValue]="item" *ngFor="
+          let item of provincias">{{item.nombre}}</option>
+        </select>
       </div>
       <div class="FormularioRegistro">
         <label>Distrito</label>
-      <input type="text" >
+        <select name="distrito" id="distrito" formControlName="distrito" class="from-control">
+          <option value="item" *ngFor="
+          let item of distritos">{{item.nombre}}</option>
+        </select>
       </div>
       <div class="FormularioRegistro">
         <label>Grado Academico</label>
-      <input type="text" >
+      <input name="Grado_academico" type="text" formControlName="Grado_academico" >
+      </div>
+      <div class="BotonGenerar">
+        <button  id="Generar" type="submit"  >REGISTRAR</button>
       </div>
     </form>
   </div>
-  <div class="BotonGenerar">
-    <input (click)="EnviarLogin()"  id="Generar" type="submit" value="REGISTRAR" >
-    </div>
 </aside>
 
 

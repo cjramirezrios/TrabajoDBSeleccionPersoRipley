@@ -1,41 +1,40 @@
-/*export class Usuario{
-  private  correo: String;
-    private contra: String;
-    private tipoUsuario: String;
-    private nroDni: String;
-    private nombres: String;
-    private apellidos: String;
+export class Usuario{
+   correo: String = "";
+   contra: String = "";
+     tipoUsuario: String = "";
+     nroDni: String = "";
+     nombres: String = "";
+     apellidos: String = "";
 }
 
 export class Postulante{
-  private  telefono :String;
-  private  ciudad : String;
-  private  distrito: String;
-    private  gradoEstudio:String;
-    private  fechaNac: Date;
-    private  nroDni:String;
+    telefono :String = "";
+    ciudad : String = "";
+    distrito: String = "";
+      gradoEstudio:String = "";
+     fechaNac: Date = new Date();
+      nroDni:String = "";
 }
 
 export class Administrador{
-  private area: Integer;
-    private nombreDep: String;
-    private modalidad: String;
-    private nroDni:String;
+      area: String = "" ;
+     nombreDep: String = "";
+     modalidad: String = "";
+     nroDni:String = "";
 }
 
 export class Convocatoria{
-  private  cantVac: Integer;
-    private  puesto:String;
-    private  codConv:Integer;
-    private modEmpleo: String;
-    private  fechaI: Date;
-    private  fechaF:Date;
-    private  estado: Integer;
-    private  remun:Float;
-    private  ubic: String;
-    private edadMax: Integer;
-    private  edadMin: Integer;
-    private  tipoEmp:String;
-    private  codTest:Integer;
+    cantVac: number = 0;
+      puesto:String = "";
+      codConv:number = 0;
+     modEmpleo: String = "";
+     fechaI: Date =new Date();
+      fechaF:Date = new Date() ;
+      estado: String = "";
+      remun:number = 0;
+      ubic: String = "";
+     edadMax: number = 0;
+      edadMin: number = 0;
+      tipoEmp:String = "";
+      codTest:number = 0;
 }
-*/

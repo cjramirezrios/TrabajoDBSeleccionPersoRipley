@@ -15,6 +15,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
+import { HomePosComponent } from './home-pos/home-pos.component';
 
 
 
@@ -24,7 +25,8 @@ const appRoutes:Routes=[
   {path:'home', component:HomeComponent},
   {path:'CreacionConvocatoria', component:CreacionConvocatoriaComponent},
   {path:'VerConvocatoria', component:VerConvocatoriaComponent},
-  {path:'VerFormularioMensaje', component:FormularioMensajeGmComponent}
+  {path:'VerFormularioMensaje', component:FormularioMensajeGmComponent},
+  {path:'homepos', component:HomePosComponent}
 ];
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ const appRoutes:Routes=[
     HomeComponent,
     CreacionConvocatoriaComponent,
     VerConvocatoriaComponent,
-    FormularioMensajeGmComponent
+    FormularioMensajeGmComponent,
+    HomePosComponent
   ],
   imports: [
     BrowserModule,
